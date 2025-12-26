@@ -13,7 +13,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Run stage
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:21-jdk
 
 # Install Maven in the runtime image
 RUN apt-get update && apt-get install -y maven && apt-get clean
